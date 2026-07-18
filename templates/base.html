@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>PetCare Hub</title>
+
+    {% load static %}
+
+    <link rel="stylesheet"
+    href="{% static 'css/style.css' %}">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🐾 PetCare Hub
+    </div>
+
+    <nav>
+
+    <a href="/">Home</a>
+
+    <a href="/about/">About</a>
+
+    <a href="/pets/">Pets</a>
+
+    <a href="/services/">Services</a>
+
+    <a href="/contact/">Contact</a>
+
+    <a href="/notifications/">Notifications</a>
+
+    <a href="/dashboard/">Dashboard</a>
+
+    {% if user.is_authenticated %}
+
+        <a href="/logout/">Logout</a>
+
+    {% else %}
+
+        <a href="/login/">Login</a>
+
+        <a href="/register/">Register</a>
+
+    {% endif %}
+
+</nav>
+
+</header>
+
+<main>
+
+    {% block content %}
+    {% endblock %}
+
+</main>
+
+<footer>
+
+    <h3>🐾 PetCare Hub</h3>
+
+    <p>
+        Helping pets find loving homes and professional care.
+    </p>
+
+    <p>
+        📧 support@petcarehub.com
+    </p>
+
+    <p>
+        📞 +91 0998887776
+    </p>
+
+    <p>
+        © 2026 PetCare Hub. All Rights Reserved.
+    </p>
+    <p>
+        Project by Rejoice Poulose
+    </p>
+
+</footer>
+
+</body>
+
+</html>

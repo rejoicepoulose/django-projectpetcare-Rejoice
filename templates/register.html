@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="section">
+
+<div class="form-box">
+
+    <h2>Create Your Account</h2>
+
+    <p align="center">
+        Join PetCare Hub and start your pet adoption journey.
+    </p>
+
+    <br>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button class="btn">
+            Register
+        </button>
+
+    </form>
+
+    <br>
+
+    <p align="center">
+        Already have an account?
+        <a href="/login/">Login Here</a>
+    </p>
+
+</div>
+
+</section>
+
+{% endblock %}

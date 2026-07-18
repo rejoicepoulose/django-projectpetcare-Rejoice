@@ -1,0 +1,195 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<section class="section">
+
+
+<h1 align="center">
+    ✂ Pet Grooming Services
+</h1>
+
+<p align="center">
+    Keep your pets healthy, clean, and happy with our professional grooming services.
+</p>
+
+<br><br>
+
+<div class="card-container">
+
+    <div class="card">
+
+    <img
+    src="{% static 'images/basic.PNG' %}"
+    alt="Basic Grooming">
+
+    <div class="card-content">
+
+            <h3>🐾 Basic Grooming</h3>
+
+            <p>
+                Bathing, brushing, nail trimming, ear cleaning, and coat care.
+            </p>
+
+            <p>
+                Duration: 45 Minutes
+            </p>
+
+            <h4>₹499</h4>
+
+            <br>
+
+            <a href="{% url 'book_grooming' %}" class="btn">
+                Book Now
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+    <img
+    src="{% static 'images/premium.PNG' %}"
+    alt="Premium Grooming">
+
+    <div class="card-content">
+
+            <h3>✂ Premium Grooming</h3>
+
+            <p>
+                Full grooming package including haircut, bathing, brushing, and hygiene care.
+            </p>
+
+            <p>
+                Duration: 90 Minutes
+            </p>
+
+            <h4>₹999</h4>
+
+            <br>
+
+            <a href="{% url 'book_grooming' %}" class="btn">
+                Book Now
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+    <img
+    src="{% static 'images/luxury.PNG' %}"
+    alt="Luxury Grooming">
+
+    <div class="card-content">
+
+            <h3>👑 Luxury Spa Grooming</h3>
+
+            <p>
+                Premium spa treatment, styling, perfume, coat conditioning, and relaxation therapy.
+            </p>
+
+            <p>
+                Duration: 2 Hours
+            </p>
+
+            <h4>₹1499</h4>
+
+            <br>
+
+            <a href="{% url 'book_grooming' %}" class="btn">
+                Book Now
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<section class="section">
+
+
+<h1 align="center">
+    Why Groom Your Pet?
+</h1>
+
+<br>
+
+<div class="card-container">
+
+    <div class="card">
+
+        <div class="card-content">
+
+            <h3>🧼 Better Hygiene</h3>
+
+            <p>
+                Regular grooming keeps your pet clean and free from dirt and infections.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-content">
+
+            <h3>💖 Health Monitoring</h3>
+
+            <p>
+                Grooming helps identify skin issues, ticks, wounds, and health concerns early.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <div class="card-content">
+
+            <h3>✨ Healthy Coat</h3>
+
+            <p>
+                Proper grooming improves coat quality and reduces shedding.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</section>
+
+<section class="section" align="center">
+
+
+<h1>
+    Schedule a Grooming Session Today
+</h1>
+
+<br>
+
+<p>
+    Give your pet the care they deserve with our professional grooming experts.
+</p>
+
+<br>
+
+<a href="{% url 'book_grooming' %}" class="btn">
+    Book Appointment
+</a>
+
+
+</section>
+
+{% endblock %}

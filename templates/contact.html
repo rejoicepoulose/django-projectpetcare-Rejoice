@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="section">
+
+    <h1 align="center">Contact PetCare Hub</h1>
+
+    <br>
+
+    <p align="center">
+        We'd love to hear from you. Contact us for adoption assistance,
+        grooming appointments, or general inquiries.
+    </p>
+
+    <br><br>
+
+    <div class="card-container">
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h3>📍 Address</h3>
+
+                <p>
+                    PetCare Hub Office<br>
+                    Anna Nagar, Chennai,<br>
+                    Tamil Nadu, India
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h3>📞 Phone</h3>
+
+                <p>
+                    +91 0998887776
+                </p>
+
+                <h3>📧 Email</h3>
+
+                <p>
+                    support@petcarehub.com
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h3>🕒 Working Hours</h3>
+
+                <p>
+                    Monday - Saturday<br>
+                    9:00 AM - 7:00 PM
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <br><br>
+
+    <div class="form-box">
+
+        <h2>Send Us a Message</h2>
+
+        <br>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <input
+                type="text"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                rows="6"
+                placeholder="Your Message"
+                required>
+            </textarea>
+
+            <button class="btn">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

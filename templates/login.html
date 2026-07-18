@@ -1,0 +1,63 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="section">
+
+<div class="form-box">
+
+    <h2>Welcome Back</h2>
+
+    <p align="center">
+        Login to manage adoptions, grooming appointments, and your profile.
+    </p>
+
+    <br>
+
+    {% if message %}
+        <p align="center">
+            {{ message }}
+        </p>
+        <br>
+    {% endif %}
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <input
+            type="text"
+            name="username"
+            placeholder="Enter Username"
+            required
+        >
+
+        <br><br>
+
+        <input
+            type="password"
+            name="password"
+            placeholder="Enter Password"
+            required
+        >
+
+        <br><br>
+
+        <button class="btn">
+            Login
+        </button>
+
+    </form>
+
+    <br>
+
+    <p align="center">
+        Don't have an account?
+        <a href="/register/">Register Here</a>
+    </p>
+
+</div>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="section">
+
+    <div class="form-box">
+
+        <h2>Pet Adoption Application</h2>
+
+        <p align="center">
+            Fill in the form below to apply for pet adoption.
+        </p>
+
+        <br>
+        {% if success %}
+
+        <h3 align="center" style="color:green;">
+           ✅ Adoption request submitted successfully!
+        </h3>
+
+{% endif %}
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button class="btn">
+                Submit Application
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

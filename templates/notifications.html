@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="section">
+
+    <h1 align="center">
+        🔔 Latest Notifications
+    </h1>
+
+    <p align="center">
+        Stay updated with adoption requests, grooming schedules, and important announcements.
+    </p>
+
+    <br><br>
+
+    <div class="card-container">
+
+        {% for notification in notifications %}
+
+        <div class="card">
+
+            <div class="card-content">
+
+                <h2>
+                    {{ notification.title }}
+                </h2>
+
+                <p>
+                    {{ notification.message }}
+                </p>
+
+                <br>
+
+                <small>
+                    {{ notification.created_at }}
+                </small>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <div align="center">
+
+            <h3>
+                No notifications available.
+            </h3>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}

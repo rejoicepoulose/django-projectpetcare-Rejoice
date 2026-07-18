@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="section">
+
+```
+<div class="form-box">
+
+    <h2>Book Grooming Appointment</h2>
+
+    <p align="center">
+        Schedule a professional grooming session for your pet.
+    </p>
+
+    <br>
+
+    {% if success %}
+
+    <h2 align="center">
+        ✅ Grooming appointment booked successfully!
+    </h2>
+
+{% endif %}
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button class="btn">
+            Book Appointment
+        </button>
+
+    </form>
+
+</div>
+```
+
+</section>
+
+{% endblock %}

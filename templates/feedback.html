@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="section">
+
+    <div class="form-box">
+
+        <h2 align="center">
+            ⭐ Feedback & Reviews
+        </h2>
+
+        <p align="center">
+            We value your feedback. Please rate our services and share your experience.
+        </p>
+
+        <br>
+        {% if success %}
+
+       <p style="color:green; font-weight:bold;">
+            Feedback submitted successfully!
+       </p>
+
+{% endif %}
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button class="btn">
+                Submit Feedback
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+{% endblock %}

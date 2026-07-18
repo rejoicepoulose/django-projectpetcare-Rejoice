@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="section">
+
+```
+<h1 align="center">
+    📊 Admin Dashboard
+</h1>
+
+<br><br>
+
+<div class="card-container">
+
+    <div class="card">
+        <div class="card-content">
+            <h2>Total Users</h2>
+            <h1>{{ user_count }}</h1>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h2>Total Pets</h2>
+            <h1>{{ pet_count }}</h1>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h2>Adoption Requests</h2>
+            <h1>{{ adoption_count }}</h1>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h2>Grooming Bookings</h2>
+            <h1>{{ grooming_count }}</h1>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h2>Feedback Entries</h2>
+            <h1>{{ feedback_count }}</h1>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h2>Notifications</h2>
+            <h1>{{ notification_count }}</h1>
+        </div>
+    </div>
+    <div class="card">
+    <div class="card-content">
+        <h2>Messages</h2>
+        <h1>{{ message_count }}</h1>
+    </div>
+</div>
+</div>
+```
+
+</section>
+
+{% endblock %}

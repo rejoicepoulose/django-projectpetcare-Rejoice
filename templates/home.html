@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+
+<h1>🐾 Find Your Perfect Companion</h1>
+
+<p>
+    Discover loving pets waiting for a forever home and enjoy professional grooming services for your furry friends.
+</p>
+
+<div class="hero-buttons">
+
+    <a href="/pets/" class="btn">
+        Browse Pets
+    </a>
+
+    <a href="/book-grooming/" class="btn">
+        Book Grooming
+    </a>
+
+</div>
+
+
+</section>
+
+<!-- BANNER IMAGE -->
+
+<section class="section">
+
+
+<img
+src="{% static 'images/banner.PNG' %}"
+alt="PetCare Banner"
+style="
+width:100%;
+max-height:500px;
+object-fit:cover;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+">
+
+
+</section>
+
+<!-- FEATURES -->
+
+<section class="section">
+
+
+<h1 align="center">Why Choose PetCare Hub?</h1>
+
+<br>
+
+<div class="card-container">
+
+    <div class="card">
+        <div class="card-content">
+            <h3>🐶 Pet Adoption</h3>
+            <p>
+                Find dogs, cats, rabbits and other pets looking for a loving home.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h3>✂ Professional Grooming</h3>
+            <p>
+                Book bathing, haircuts, nail trimming and wellness services.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h3>🛡 Safe & Verified</h3>
+            <p>
+                Secure adoption process with verified pet information.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- STATISTICS -->
+
+<section class="section">
+
+
+<h1 align="center">Our Impact</h1>
+
+<br>
+
+<div class="card-container">
+
+    <div class="card">
+        <div class="card-content">
+            <h2>500+</h2>
+            <p>Successful Adoptions</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h2>1200+</h2>
+            <p>Happy Pet Owners</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h2>300+</h2>
+            <p>Monthly Grooming Sessions</p>
+        </div>
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- FEATURED PETS -->
+
+<section class="section">
+
+
+<h1 align="center">Featured Pets</h1>
+
+<br>
+
+<div class="card-container">
+
+    <div class="card">
+        <div class="card-content">
+            <h3>🐕 Bruno</h3>
+            <p>Breed: Labrador Retriever</p>
+            <p>Age: 2 Years</p>
+            <p>Location: Chennai</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h3>🐕 Bella</h3>
+            <p>Breed: Golden Retriever</p>
+            <p>Age: 1 Year</p>
+            <p>Location: Coimbatore</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <h3>🐈 Coco</h3>
+            <p>Breed: Persian Cat</p>
+            <p>Age: 3 Years</p>
+            <p>Location: Madurai</p>
+        </div>
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- TESTIMONIALS -->
+
+<section class="section">
+
+
+<h1 align="center">Happy Customers</h1>
+
+<br>
+
+<div class="card-container">
+
+    <div class="card">
+        <div class="card-content">
+            <p>
+                "PetCare Hub helped us find the perfect family dog. The process was easy and professional."
+            </p>
+            <h4>- Priya R.</h4>
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="card-content">
+            <p>
+                "The grooming service was excellent. My pet looked amazing after the appointment."
+            </p>
+            <h4>- Arjun K.</h4>
+        </div>
+    </div>
+
+</div>
+
+
+</section>
+
+<!-- CALL TO ACTION -->
+
+<section class="section" align="center">
+
+
+<h1>Ready to Welcome a New Friend?</h1>
+
+<br>
+
+<p>
+    Explore available pets and begin your adoption journey today.
+</p>
+
+<br>
+
+<a href="/pets/" class="btn">
+    Adopt Now
+</a>
+
+
+</section>
+
+{% endblock %}

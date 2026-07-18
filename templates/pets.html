@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="section">
+
+    <h1 align="center">
+        🐾 Available Pets for Adoption
+    </h1>
+
+    <p align="center">
+        Browse our adorable pets and find your perfect companion.
+    </p>
+
+    <br>
+
+    <form method="GET" align="center">
+
+        <input
+        type="text"
+        name="search"
+        placeholder="Search by Name, Breed or Location"
+        style="
+        width:400px;
+        padding:12px;
+        border-radius:5px;
+        border:1px solid #ccc;">
+         <br><br>
+
+        <input
+        type="number"
+        name="age"
+        placeholder="Search by Age"
+        style="
+        width:200px;
+        padding:12px;
+        border-radius:5px;
+        border:1px solid #ccc;">
+
+        <button class="btn">
+            Search
+        </button>
+
+    </form>
+
+    <br><br>
+
+    <div class="card-container">
+
+        {% for pet in pets %}
+
+        <div class="card">
+            {% if pet.image %}
+<img
+    src="{{ pet.image.url }}"
+    alt="{{ pet.name }}"
+    width="250"
+    height="200"
+>
+{% endif %}
+
+            <div class="card-content">
+                
+
+                <h2>{{ pet.name }}</h2>
+                <p>
+                    <strong>Species:</strong>
+                    {{ pet.species }}
+                </p>
+
+                <p>
+                    <strong>Breed:</strong>
+                    {{ pet.breed }}
+                </p>
+                <p>
+                    <strong>Temperament:</strong>
+                    {{ pet.temperament }}
+                </p>
+
+                <p>
+                    <strong>Age:</strong>
+                    {{ pet.age }} Years
+                </p>
+
+                <p>
+                    <strong>Location:</strong>
+                    {{ pet.location }}
+                </p>
+
+                <p>
+                    <strong>Status:</strong>
+                    {{ pet.status }}
+                </p>
+
+                <hr>
+
+                <p>
+                    {{ pet.description }}
+                </p>
+
+                <br>
+
+                <a href="/adopt/" class="btn">
+                    Apply for Adoption
+                </a>
+
+            </div>
+
+        </div>
+
+        {% empty %}
+
+        <div align="center">
+
+            <h3>
+                No pets found.
+            </h3>
+
+            <p>
+                Try another search.
+            </p>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+</section>
+
+{% endblock %}
