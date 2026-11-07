@@ -1,62 +1,61 @@
+
 {% extends 'base.html' %}
 
 {% block content %}
 
 <section class="section">
 
-<div class="form-box">
+    <div class="form-box">
 
-    <h2>Welcome Back</h2>
+        <h2>Welcome Back</h2>
 
-    <p align="center">
-        Login to manage adoptions, grooming appointments, and your profile.
-    </p>
-
-    <br>
-
-    {% if message %}
         <p align="center">
-            {{ message }}
+            Login to manage adoptions, grooming appointments, and your profile.
         </p>
+
         <br>
-    {% endif %}
 
-    <form method="POST">
+        {% if message %}
+            <p align="center">{{ message }}</p>
+            <br>
+        {% endif %}
 
-        {% csrf_token %}
+        <form method="POST" action="{% url 'login' %}">
 
-        <input
-            type="text"
-            name="username"
-            placeholder="Enter Username"
-            required
-        >
+            {% csrf_token %}
 
-        <br><br>
+            <input
+                type="text"
+                name="username"
+                placeholder="Enter Username"
+                required
+            >
 
-        <input
-            type="password"
-            name="password"
-            placeholder="Enter Password"
-            required
-        >
+            <br><br>
 
-        <br><br>
+            <input
+                type="password"
+                name="password"
+                placeholder="Enter Password"
+                required
+            >
 
-        <button class="btn">
-            Login
-        </button>
+            <br><br>
 
-    </form>
+            <button type="submit" class="btn">
+                Login
+            </button>
 
-    <br>
+        </form>
 
-    <p align="center">
-        Don't have an account?
-        <a href="/register/">Register Here</a>
-    </p>
+        <br>
 
-</div>
+        <p align="center">
+            Don't have an account?
+            <a href="{% url 'register' %}">Register Here</a>
+        </p>
+
+    </div>
 
 </section>
 
